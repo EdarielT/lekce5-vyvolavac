@@ -52,4 +52,17 @@ function tahnoutJmeno() {
     let seznam = document.querySelector('#seznam');
     seznam.textContent = tazenaJmena;
     
+    pocitadlo();
+}
+
+let numberOfGirls = 0;
+let pocitadlo = () =>{
+    numberOfGirls++;
+    if (!(numberOfGirls < 5)){
+        document.getElementById('pocitadlo').innerHTML = `Již ${numberOfGirls} holek bylo vyvoláno`;
+    } else if (numberOfGirls !== 1) {
+        document.getElementById('pocitadlo').innerHTML = `Již ${numberOfGirls} holky bylo vyvoláno`;
+    } else {
+        document.getElementById('pocitadlo').innerHTML = `Již ${numberOfGirls} holka byla vyvolána`;
+    }
 }
