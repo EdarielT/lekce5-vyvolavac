@@ -50,7 +50,7 @@ function tahnoutJmeno() {
     vyherce.textContent = vyherniJmeno;
 
     let seznam = document.querySelector('#seznam');
-    seznam.textContent = tazenaJmena;
+    seznam.textContent = tazenaJmena.join(', ');
     
     pocitadlo();
 }

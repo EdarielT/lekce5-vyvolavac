@@ -51,6 +51,8 @@ h2 {
 #seznam {
 	font-size: 20px;
 	color: #3b518d;
+	width: 750px;
+	overflow-wrap: break-word;
 }
 
 .tlacitko {
