@@ -59,7 +59,6 @@ function tahnoutJmeno() {
 //counting girls that have been called
 //let numberOfGirls = tazenaJmena.length;
 let pocitadlo = () =>{
-    //numberOfGirls++;
     let numberOfGirls = tazenaJmena.length;
     if (!(numberOfGirls < 5)){
         document.getElementById('pocitadlo').innerHTML = `Již ${numberOfGirls} holek bylo vyvoláno`;
@@ -74,7 +73,6 @@ let pocitadlo = () =>{
 
 //restarting the calling cycle
 let startOver = () => {
-
     let gettingAllNamesBack = (element) => {
         jmena.unshift(element);
     }
@@ -89,5 +87,4 @@ let startOver = () => {
     seznam.textContent = tazenaJmena;
     let vyherce = document.querySelector('#vyherka');
     vyherce.textContent = ' ';
-
 }
