@@ -55,14 +55,39 @@ function tahnoutJmeno() {
     pocitadlo();
 }
 
-let numberOfGirls = 0;
+
+//counting girls that have been called
+//let numberOfGirls = tazenaJmena.length;
 let pocitadlo = () =>{
-    numberOfGirls++;
+    //numberOfGirls++;
+    let numberOfGirls = tazenaJmena.length;
     if (!(numberOfGirls < 5)){
         document.getElementById('pocitadlo').innerHTML = `Již ${numberOfGirls} holek bylo vyvoláno`;
-    } else if (numberOfGirls !== 1) {
+    } else if (numberOfGirls > 1) {
         document.getElementById('pocitadlo').innerHTML = `Již ${numberOfGirls} holky bylo vyvoláno`;
-    } else {
+    } else if (numberOfGirls === 1){
         document.getElementById('pocitadlo').innerHTML = `Již ${numberOfGirls} holka byla vyvolána`;
+    } else {
+        document.getElementById('pocitadlo').innerHTML = `Zatím nebyla vyvolána žádná holka`;
     }
+}
+
+//restarting the calling cycle
+let startOver = () => {
+
+    let gettingAllNamesBack = (element) => {
+        jmena.unshift(element);
+    }
+    
+    tazenaJmena.forEach(gettingAllNamesBack);
+
+    //clearing all the data and getting to a start point
+    tazenaJmena = [];
+    pocitadlo();
+
+    let seznam = document.querySelector('#seznam');
+    seznam.textContent = tazenaJmena;
+    let vyherce = document.querySelector('#vyherka');
+    vyherce.textContent = ' ';
+
 }
